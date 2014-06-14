@@ -1,0 +1,44 @@
+#search-container {
+    padding-top: 4%;
+    min-height: 400px;
+}
+
+#main-search-form{
+    margin: auto;
+}
+#search-content {
+
+}
+footer{
+    height: 50px;
+    bottom: 25px;
+
+}
+.center {
+    text-align: center;
+}
+
+.disclaimer {
+    color: #BBBBBB;
+    font-weight: normal;
+    font-size: small;
+}
+
+#ad-top {
+    padding-top: 1%;
+}
+#ad-bottom {
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+.clear {
+    clear:both;
+}
+.beta {
+    height: 50px;
+    width: 50px;
+}
+
+.container {
+    min-height: 400px;
+}
