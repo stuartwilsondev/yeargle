@@ -3,6 +3,7 @@
 namespace Yeargle\Bundle\CoreBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\NoResultException;
 
 /**
  * SearchesRepository
@@ -13,4 +14,26 @@ use Doctrine\ORM\EntityRepository;
 class SearchesRepository extends EntityRepository
 {
 
+    const NO_OF_SEARCHES_TO_SHOW = 10;
+
+    public function getLastTenSearches()
+    {
+        $q = $this
+            ->createQueryBuilder('s')
+            ->setMaxResults(self::NO_OF_SEARCHES_TO_SHOW)
+            ->orderBy('s.searchDate', 'DESC')
+            ->getQuery();
+
+        try {
+            // The Query::getSingleResult() method throws an exception
+            // if there is no record matching the criteria.
+            $searches = $q->getArrayResult();
+
+        } catch (NoResultException $e) {
+            $message = 'Unable to load Searches';
+            $searches = false;
+        }
+
+        return $searches;
+    }
 }

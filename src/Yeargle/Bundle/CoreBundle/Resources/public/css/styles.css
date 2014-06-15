@@ -1,6 +1,6 @@
 #search-container {
-    padding-top: 4%;
-    min-height: 400px;
+    padding-top: 1%;
+    min-height: 300px;
 }
 
 #main-search-form{
@@ -54,4 +54,16 @@ footer{
 
 #search_buttons {
     text-align: center;
+}
+
+#old-search-list .odd {
+    background-color: #fafafa;
+}
+
+#old-search-list .even {
+    background-color: #f5f5f5;
+}
+
+#old-search-list > li  {
+    padding: 5px;
 }

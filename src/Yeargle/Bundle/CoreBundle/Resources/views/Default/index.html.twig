@@ -19,7 +19,6 @@
         </h1>
 
         <div class="row center">
-
             {{ form_start(searchForm) }}
                 <div class="row collapse center">
                     <div class="small-12 large-12 center columns">
@@ -37,6 +36,20 @@
         <img src="http://placehold.it/728x90"/>
     </div>
     <div class="clear"></div>
+
+    <div id="old-searches-container" class="row large-5 small-5">
+        {% if lastTenSearches %}
+            <h3>Recently Searched:</h3>
+            <ul id="old-search-list" class="no-bullet">
+                {% for search in lastTenSearches %}
+                    <li class="{{ cycle(['even','odd'],loop.index) }}">
+                        <a href="#" class="view-old-search" title="view">{{ search.searchText|escape }} </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
 
     <div class="center row large-5 small-5">
         <div class="clear"></div>
