@@ -16,6 +16,13 @@
     {% endspaceless %}
     {% endstylesheets %}
 
+    {% block favicon %}
+        {% image '@YeargleCoreBundle/Resources/public/images/favicon.ico' %}
+            <link rel="icon" type="image/x-icon" href="{{ asset_url }}" />
+        {% endimage %}
+    {% endblock favicon %}
+
+
     {%  javascripts
     '@YeargleCoreBundle/Resources/public/js/vendor/jquery.js'
     '@YeargleCoreBundle/Resources/public/js/modernizr.js'

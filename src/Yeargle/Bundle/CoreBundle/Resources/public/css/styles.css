@@ -42,3 +42,11 @@ footer{
 .container {
     min-height: 400px;
 }
+
+#main-search-btn {
+    max-width: 260px;
+}
+
+#main-search-rand {
+    max-width: 260px;
+}

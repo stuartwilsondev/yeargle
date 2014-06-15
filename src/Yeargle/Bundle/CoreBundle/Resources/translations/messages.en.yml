@@ -1,0 +1,7 @@
+Search:
+  element:
+    text: "Welcome To Yeargle"
+    titleonly: "Search in title only?"
+    search: "Search"
+    random: "Something Random?"
+

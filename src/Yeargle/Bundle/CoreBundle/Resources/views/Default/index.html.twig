@@ -17,11 +17,21 @@
             <img src="{{ asset_url }}" class="beta" alt="Beta" />
             {% endimage %}
         </h1>
-        <p>Welcome to Yeargle</p>
-
 
         <div class="row center">
 
+            {{ form_start(searchForm) }}
+                <div class="row collapse center">
+                    {{ form_row(searchForm.search_element_text) }}
+                    <div id="main-search-btn">
+                        {{ form_row(searchForm.search_element_search) }}
+                    </div>
+                    <div id="main-search-rand" class="pull-right">
+                        {{ form_row(searchForm.search_element_random) }}
+                    </div>
+
+                </div>
+            {{ form_end(searchForm) }}
             <form id="main-search-form" accept-charset="UTF-8" action="yeargle-search" method="POST">
                 <div class="row collapse center">
                     <div class="small-12 large-12 center ">
