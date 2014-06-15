@@ -43,13 +43,13 @@ class MainSearch extends AbstractType
                     new NotBlank(),
                     new Length(array('min' => 3)),
                 )
-            ))
-            ->add('search_element_search', 'submit', array(
+            ));
+         /*   ->add('search_element_search', 'submit', array(
                 'attr' => array('class'=> 'button'),
             ))
             ->add('search_element_random', 'submit', array(
                 'attr' => array('class'=> 'button'),
-            ));
+            ));*/
 
                 // <input type="button" class="button" value="Search"/>
                         //<input type="button" class="button" value="Show Me Something Random"/>
