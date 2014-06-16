@@ -6,9 +6,9 @@
     <title>Yeargle.com | Welcome - search last year, Now! </title>
 
     {% stylesheets
-    '@YeargleCoreBundle/Resources/public/css/foundation.min.css'
-    '@YeargleCoreBundle/Resources/public/css/foundation-icons.css'
-    '@YeargleCoreBundle/Resources/public/css/styles.css'
+    '/bundles/yearglecore/css/foundation.min.css'
+    '/bundles/yearglecore/css/foundation-icons.css'
+    '/bundles/yearglecore/css/styles.css'
     %}
 
     {% spaceless %}
@@ -17,16 +17,16 @@
     {% endstylesheets %}
 
     {% block favicon %}
-        {% image '@YeargleCoreBundle/Resources/public/images/favicon.ico' %}
+        {% image '/bundles/yearglecore/images/favicon.ico' %}
             <link rel="icon" type="image/x-icon" href="{{ asset_url }}" />
         {% endimage %}
     {% endblock favicon %}
 
 
     {%  javascripts
-    '@YeargleCoreBundle/Resources/public/js/vendor/jquery.js'
-    '@YeargleCoreBundle/Resources/public/js/modernizr.js'
-    '@YeargleCoreBundle/Resources/public/js/scripts.js'
+    '/bundles/yearglecore/js/vendor/jquery.js'
+    '/bundles/yearglecore/js/modernizr.js'
+    '/bundles/yearglecore/js/scripts.js'
     %}
 
 
