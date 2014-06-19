@@ -20,6 +20,7 @@ class SearchesRepository extends EntityRepository
     {
         $q = $this
             ->createQueryBuilder('s')
+            ->select('DISTINCT s.searchText')
             ->setMaxResults(self::NO_OF_SEARCHES_TO_SHOW)
             ->orderBy('s.searchDate', 'DESC')
             ->getQuery();
