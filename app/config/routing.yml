@@ -1,0 +1,4 @@
+yeargle_core:
+    resource: "@YeargleCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+

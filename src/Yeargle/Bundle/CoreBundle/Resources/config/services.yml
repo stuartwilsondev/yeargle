@@ -1,0 +1,7 @@
+parameters:
+#    yeargle_core.example.class: Yeargle\Bundle\CoreBundle\Example
+
+services:
+#    yeargle_core.example:
+#        class: %yeargle_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

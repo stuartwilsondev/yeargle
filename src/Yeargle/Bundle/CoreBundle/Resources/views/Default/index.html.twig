@@ -1,0 +1,82 @@
+{# Extend the base layout file #}
+{% extends 'base.html.twig' %}
+
+{% block main_content %}
+
+    <div id="ad-top" class="center row large-5 small-5">
+        <img src="http://placehold.it/728x90"/>
+    </div>
+
+    <div id="search-container" class="center row large-5 small-5">
+
+        <h1>
+            {% image '@YeargleCoreBundle/Resources/public/images/yeaglelogo.png' %}
+            <img src="{{ asset_url }}" alt="Yeargle" />
+            {% endimage %}
+            {% image '@YeargleCoreBundle/Resources/public/images/beta.png' %}
+            <img src="{{ asset_url }}" class="beta" alt="Beta" />
+            {% endimage %}
+        </h1>
+
+        <div class="row center">
+            {{ form_start(searchForm) }}
+                <div class="row collapse center">
+                    <div class="small-12 large-12 center columns">
+                        {{ form_row(searchForm.search_element_text) }}
+                    </div>
+
+                    <input type="submit" class="button" value="Search"/>
+                    <input type="button" class="button" value="Something Random?"/>
+                </div>
+            {{ form_end(searchForm) }}
+        </div>
+    </div>
+
+    <div id="ad-bottom" class="center row large-5 small-5">
+        <img src="http://placehold.it/728x90"/>
+    </div>
+    <div class="clear"></div>
+
+    <div id="old-searches-container" class="row large-5 small-5">
+        {% if lastTenSearches %}
+            <h3>Recently Searched:</h3>
+            <ul id="old-search-list" class="no-bullet">
+                {% for search in lastTenSearches %}
+                    <li class="{{ cycle(['even','odd'],loop.index) }}">
+                        <a href="#" class="view-old-search" title="view">{{ search.searchText|escape }} </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+
+    <div class="center row large-5 small-5">
+        <div class="clear"></div>
+        <footer class="footer">
+            <div class="large-12 small-12 columns disclaimer">
+                Yeargle.com is a bit of fun and is not associated with Google&#8482; in any way.
+            </div>
+            <div class="large-12 small-12 columns">
+                <hr />
+                <div class="">
+
+                    <p class="left">&copy; Yeargle.</p>
+
+
+                    <ul class="inline-list right">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a target="_blank" href="http://eepurl.com/WZkX5">Newsletter</a></li>
+                        <li><a target="_blank" href="http://twitter.com/yearglesearch">&#64;Yearglesearch</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+{% endblock main_content %}

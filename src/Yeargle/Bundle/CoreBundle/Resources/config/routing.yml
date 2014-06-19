@@ -1,0 +1,3 @@
+yeargle_core_homepage:
+    pattern:  /
+    defaults: { _controller: YeargleCoreBundle:Default:index }
