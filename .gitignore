@@ -12,4 +12,7 @@
 !bin/symfony_requirements
 /composer.phar
 .idea/
+/web/images/*
+/web/css/*
+/web/js/*
 composer.lock
